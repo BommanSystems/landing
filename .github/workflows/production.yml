@@ -1,0 +1,87 @@
+name: Production
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to deploy"
+        required: true
+        default: "master"
+        type: string
+      email:
+        description: "Enter deployment email"
+        required: true
+        type: string
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      pull-requests: read
+
+    steps:
+      - name: Validate branch input
+        run: |
+          BRANCH=${{ github.event.inputs.branch }}
+          if [-z "$BRANCH" ]; then
+            echo "Branch name cannot be empty."
+            exit 1
+          fi
+          echo "Branch to deploy: $BRANCH"
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
+          fetch-depth: 0
+
+      - name: Verify deployment email
+        run: |
+          INPUT_EMAIL="${{ github.event.inputs.email }}"
+          AUTHORIZED_EMAILS="${{ secrets.DEPLOYMENT_EMAILS }}"
+
+          echo "Input Email: $INPUT_EMAIL"
+          echo "Authorized Emails: $AUTHORIZED_EMAILS"
+
+          if [-z "$AUTHORIZED_EMAILS" ] then
+            echo "DEPLOYMENT_EMAIL secret is not set in repository secrets"
+            exit 1
+          fi
+
+          if [ "$INPUT_EMAIL" = "$AUTHORIZED_EMAIL" ]; then
+            echo "Email verification passed"
+            echo "verified=true" >> $GITHUB_OUTPUT
+          else
+            echo "Email verification failed. Input email does not match authorized email"
+            exit 1
+          fi
+
+  deploy:
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Deployment summary
+        run: |
+          echo "## Deployment Successful" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch**: ${{ github.event.inputs.branch }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Deployed by**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Deployment URL**: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
