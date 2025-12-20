@@ -3,190 +3,972 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta
       name="description"
-      content="Voxel by Arkasoft helps businesses send WhatsApp notifications, run approved campaigns, and manage customer communication using Meta’s official WhatsApp Cloud API."
+      content="ArkaConnect helps you send WhatsApp messages to your approved contacts, run personalized campaigns, and schedule notifications. No tech skills required. Start for free."
     />
-
     <meta
       name="keywords"
-      content="WhatsApp Business Messaging, WhatsApp Cloud API Tool, WhatsApp Campaign Software, Customer Notifications, WhatsApp Automation for Business"
+      content="WhatsApp Marketing, WhatsApp Automation Tool, WhatsApp Campaign Software, WhatsApp CRM, Business Messaging Tool, WhatsApp Chatbot, WhatsApp Scheduler, ArkaConnect Automation, Approved Messaging"
     />
-
-    <meta name="author" content="Arkasoft" />
-
+    <meta name="author" content="Arkaconnect Team" />
     <title>
-      WhatsApp Business Messaging Platform | Official Cloud API Integration |
-      Arkasoft
+      WhatsApp Automation for Business | Approved Messaging & Campaign Scheduler |
+      ArkaConnect
     </title>
-
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
     />
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "Voxel – WhatsApp Business Messaging",
+        "name": "ArkaConnect - WhatsApp Automation",
         "operatingSystem": "Web",
         "applicationCategory": "BusinessApplication",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "204"
         },
-        "description": "Voxel is a business messaging platform built on Meta's official WhatsApp Cloud API to send customer notifications, campaigns, and follow-ups."
+        "description": "Send WhatsApp messages to your approved contacts, schedule campaigns, and automate notifications with ArkaConnect – the WhatsApp engagement tool for small businesses."
       }
     </script>
-
     <style>
+      :root {
+        --primary: #1f2937;
+        --accent: #10b981;
+        --bg: #f9fafb;
+        --white: #ffffff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
       body {
         margin: 0;
-        font-family: Inter, sans-serif;
-        background: #f9fafb;
-        color: #1f2937;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg);
+        color: var(--primary);
+        max-width: 100%;
+        overflow-x: hidden;
       }
       header {
+        padding: 2rem 1rem;
         text-align: center;
-        padding: 2.5rem 1rem;
-        background: #ffffff;
+        background-color: var(--white);
       }
       h1 {
         font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+      }
+      p.subheading {
+        font-size: 1.1rem;
+        color: #4b5563;
       }
       section {
-        padding: 2.5rem 1.5rem;
+        padding: 2rem 1rem;
+        overflow-x: hidden;
       }
-      .card {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-        max-width: 320px;
-      }
-      .grid {
+      .plans {
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
         justify-content: center;
+        margin-top: 2rem;
       }
-      .cta {
-        background: #10b981;
-        color: white;
+      .plan-card {
+        background-color: var(--white);
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .plan-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      }
+      .plan-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      .plan-price {
+        font-size: 1.2rem;
+        color: var(--accent);
+        font-weight: 600;
+      }
+      .features {
+        margin-top: 1rem;
+        padding-left: 1rem;
+      }
+      .features li {
+        margin-bottom: 0.5rem;
+        list-style: "✅ ";
+      }
+      .industry-card {
+        flex: 1 1 280px;
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
         text-align: center;
       }
-      .cta a {
-        background: white;
-        color: #10b981;
-        padding: 0.8rem 1.5rem;
-        border-radius: 8px;
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-block;
+      .industry-card:hover {
+        transform: translateY(-5px);
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(10px);
+        animation: fadeIn 0.8s forwards ease-out;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      h2 {
+        font-size: 2rem;
+        text-align: center;
+      }
+      h4 {
+        font-size: 1.1rem;
         margin-top: 1rem;
+      }
+      section > div > div {
+        flex: 1 1 150px;
+        max-width: 300px;
+      }
+      .flex-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
       }
       footer {
         text-align: center;
+        padding: 2rem 1rem;
         font-size: 0.9rem;
         color: #6b7280;
-        padding: 2rem 1rem;
+      }
+      a.button {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.8rem 1.5rem;
+        background: white;
+        color: var(--accent);
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .cta-banner {
+        text-align: center;
+        padding: 3rem 1rem;
+        background-color: var(--accent);
+        color: white;
+      }
+      .flow-step {
+        max-width: 240px;
+        text-align: center;
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+        h2 {
+          font-size: 1.6rem;
+        }
+        .plans {
+          grid-template-columns: 1fr;
+        }
+        .flow-step img {
+          width: 60px;
+        }
+        section > div {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+        p.subheading {
+          font-size: 1rem;
+        }
+        .plan-title,
+        .plan-price {
+          font-size: 1rem;
+        }
+        .industry-card {
+          max-width: 100%;
+        }
+      }
+      .language-selector-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        animation: fadeIn 0.3s ease-out;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .language-selector-modal {
+        background-color: var(--white);
+        border-radius: 16px;
+        padding: 2.5rem 2rem;
+        max-width: 500px;
+        width: 90%;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        animation: slideUp 0.4s ease-out;
+        margin: 1rem;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .language-selector-modal h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+      }
+      .language-selector-modal p {
+        color: #6b7280;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+      }
+      .language-options {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .language-btn {
+        padding: 1rem 1.5rem;
+        background-color: var(--bg);
+        border: 2px solid #e5e7eb;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--primary);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        min-height: 48px;
+      }
+      .language-btn:hover {
+        background-color: var(--accent);
+        color: white;
+        border-color: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      }
+      .language-btn:active {
+        transform: translateY(0);
+        background-color: var(--accent);
+        color: white;
+      }
+      .language-btn .flag {
+        font-size: 1.5rem;
+      }
+      .language-selector-overlay.hidden {
+        display: none;
+      }
+      .translate-button {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        animation: blink 2s infinite;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .translate-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 25px rgba(16, 185, 129, 0.6);
+        animation: none;
+      }
+      .translate-button:active {
+        transform: scale(0.98);
+      }
+      .translate-button .icon {
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+      @keyframes blink {
+        0%, 100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.7;
+          transform: scale(1.05);
+        }
+      }
+      @media (max-width: 768px) {
+        .translate-button {
+          bottom: 25px;
+          right: 25px;
+          padding: 0.9rem 1.3rem;
+          font-size: 0.95rem;
+        }
+        .language-selector-modal {
+          max-width: 90%;
+          padding: 2rem 1.5rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .language-selector-modal {
+          padding: 2rem 1.5rem;
+          max-width: 95%;
+        }
+        .language-selector-modal h3 {
+          font-size: 1.3rem;
+        }
+        .language-btn {
+          padding: 0.9rem 1.2rem;
+          font-size: 1rem;
+        }
+        .translate-button {
+          bottom: 20px;
+          right: 20px;
+          padding: 0.8rem 1rem;
+          font-size: 0.85rem;
+          gap: 0.4rem;
+        }
+        .translate-button .icon {
+          font-size: 1rem;
+        }
+        .translate-button span:last-child {
+          font-size: 0.85rem;
+        }
+      }
+      @media (max-width: 360px) {
+        .translate-button {
+          bottom: 15px;
+          right: 15px;
+          padding: 0.7rem 0.9rem;
+          font-size: 0.75rem;
+        }
+        .translate-button span:last-child {
+          display: none;
+        }
+        .translate-button .icon {
+          font-size: 1.1rem;
+        }
       }
     </style>
   </head>
-
   <body>
+    <!-- Floating Translate Button -->
+    <button id="translateButton" class="translate-button" onclick="showLanguageSelector()">
+      <span class="icon">🌐</span>
+      <span data-translate="translateButtonText">Click to Translate</span>
+    </button>
+    
+    <!-- Language Selector Modal -->
+    <div id="languageSelector" class="language-selector-overlay hidden">
+      <div class="language-selector-modal">
+        <h3 data-translate="langSelectorTitle">Choose Your Language</h3>
+        <p data-translate="langSelectorSubtitle">Please select your preferred language to continue</p>
+        <div class="language-options">
+          <button class="language-btn" data-lang="en" onclick="selectLanguage('en')">
+            <span class="flag">🇬🇧</span>
+            <span data-translate="langEnglish">English</span>
+          </button>
+          <button class="language-btn" data-lang="hi" onclick="selectLanguage('hi')">
+            <span class="flag">🇮🇳</span>
+            <span data-translate="langHindi">हिंदी (Hindi)</span>
+          </button>
+          <button class="language-btn" data-lang="ta" onclick="selectLanguage('ta')">
+            <span class="flag">🇮🇳</span>
+            <span data-translate="langTamil">தமிழ் (Tamil)</span>
+          </button>
+        </div>
+      </div>
+    </div>
     <header>
-      <h1>WhatsApp Business Messaging Made Simple</h1>
-      <p>
-        Voxel helps businesses send customer notifications, campaigns, and
-        follow-ups using Meta’s official WhatsApp Cloud API.
+      <h1 class="fade-in">
+        <span data-translate="headerTitle">Automate WhatsApp for Your Business with</span>
+        <span class="highlight">ArkaConnect</span>
+      </h1>
+      <p class="subheading fade-in" style="animation-delay: 0.2s" data-translate="headerSubtitle">
+        Send WhatsApp messages to your approved contacts, schedule campaigns, and engage with people who agreed to receive messages — all
+        in one powerful, no-code tool.
       </p>
+      <div
+        id="lottie-animation"
+        style="width: 220px; height: 125px; margin: 2rem auto; overflow: hidden"
+      ></div>
     </header>
-
-    <section class="cta">
-      <h2>Official. Secure. Compliant.</h2>
-      <p>No third-party BSPs. No hidden fees. Built on Meta infrastructure.</p>
-      <a href="#get-started">Get Started</a>
-    </section>
-
-    <section>
-      <h2 style="text-align: center">What You Can Do with Voxel</h2>
-      <div class="grid">
-        <div class="card">
-          <h4>📢 Customer Notifications</h4>
-          <p>
-            Send order updates, reminders, alerts, and service notifications to
-            customers who have opted in.
-          </p>
-        </div>
-
-        <div class="card">
-          <h4>📆 Campaign Scheduling</h4>
-          <p>
-            Schedule approved WhatsApp message campaigns at the right time for
-            your customers.
-          </p>
-        </div>
-
-        <div class="card">
-          <h4>📊 Delivery Tracking</h4>
-          <p>
-            Monitor message delivery and read status using official WhatsApp
-            events.
-          </p>
-        </div>
-
-        <div class="card">
-          <h4>⚙️ Rule-Based Automation</h4>
-          <p>
-            Trigger follow-ups and notifications using predefined business
-            rules—no coding required.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2 style="text-align: center">Who Uses Voxel</h2>
-      <div class="grid">
-        <div class="card">E-commerce & Retail</div>
-        <div class="card">Education & Coaching</div>
-        <div class="card">Healthcare & Clinics</div>
-        <div class="card">Real Estate</div>
-        <div class="card">Agencies & Service Providers</div>
-      </div>
-    </section>
-
-    <section>
-      <h2 style="text-align: center">Compliance & Consent</h2>
-      <div class="grid">
-        <div class="card">
-          <p>✔ Messages are sent only to users who have explicitly opted in.</p>
-          <p>✔ Uses Meta’s official WhatsApp Cloud API.</p>
-          <p>✔ Businesses control templates and message timing.</p>
-          <p>✔ Fully compliant with WhatsApp Business Messaging Policies.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <h2>Start WhatsApp Business Messaging Today</h2>
-      <p>No credit card required for initial access.</p>
-      <a href="#get-started">Start Free</a>
-    </section>
-
-    <footer>
-      <p>
-        An Arkasoft Product · © 2025 <br />
-        Built using Meta WhatsApp Cloud API
+    <section
+      style="
+        text-align: center;
+        padding: 3rem 1.5rem;
+        background-color: var(--accent);
+        color: white;
+      "
+    >
+      <h2 style="margin-bottom: 1rem" data-translate="ctaTitle">
+        Start Automating Your WhatsApp Campaigns Today
+      </h2>
+      <p style="font-size: 1.1rem" data-translate="ctaSubtitle">
+        Join thousands of small businesses using ArkaConnect to engage with their approved contacts. No credit
+        card needed.
       </p>
-      <p>
-        <a href="/privacy-policy">Privacy Policy</a> ·
-        <a href="/terms">Terms of Service</a>
+      <a href="#get-started" class="button" data-translate="ctaButton"> Try ArkaConnect Free </a>
+    </section>
+    <section>
+      <h2 class="fade-in" data-translate="featuresTitle">Powerful Features at Your Fingertips</h2>
+      <div
+        class="fade-in"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+          justify-content: center;
+          margin-top: 2rem;
+        "
+      >
+        <div style="max-width: 260px">
+          <h4 data-translate="featurePersonalizedTitle">📤 Personalized Messaging</h4>
+          <p data-translate="featurePersonalizedDesc">
+            Send personalized messages to your approved contacts. Save time and
+            engage efficiently.
+          </p>
+        </div>
+        <div style="max-width: 260px">
+          <h4 data-translate="featureSchedulingTitle">📅 Smart Scheduling</h4>
+          <p data-translate="featureSchedulingDesc">
+            Send messages at the best time — based on time zones, days, or your
+            own automation.
+          </p>
+        </div>
+        <div style="max-width: 260px">
+          <h4 data-translate="featureAnalyticsTitle">📊 Campaign Analytics</h4>
+          <p data-translate="featureAnalyticsDesc">
+            Track delivery, read status, and reply rates. See what resonates and
+            improve fast.
+          </p>
+        </div>
+        <div style="max-width: 260px">
+          <h4 data-translate="featureAutomationTitle">🧠 Automation Workflows</h4>
+          <p data-translate="featureAutomationDesc">
+            Trigger messages based on user behavior, file updates, or custom
+            flows. No code needed.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 class="fade-in" data-translate="industriesTitle">Perfect for Every Business</h2>
+      <div
+        class="fade-in"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+          justify-content: center;
+          margin-top: 2rem;
+        "
+      >
+        <div class="industry-card">
+          <h4 data-translate="industryEcommerceTitle">🛍️ E-commerce</h4>
+          <p data-translate="industryEcommerceDesc">
+            Send cart reminders, promotional updates, and loyalty messages to customers who approved to receive messages.
+          </p>
+        </div>
+        <div class="industry-card">
+          <h4 data-translate="industryHealthcareTitle">🏥 Healthcare</h4>
+          <p data-translate="industryHealthcareDesc">
+            Send appointment reminders, health tips, and follow-ups to patients who approved to receive messages.
+          </p>
+        </div>
+        <div class="industry-card">
+          <h4 data-translate="industryEdtechTitle">📚 EdTech & Coaching</h4>
+          <p data-translate="industryEdtechDesc">Notify enrolled students, manage approved leads, and follow-up on enrollments.</p>
+        </div>
+        <div class="industry-card">
+          <h4 data-translate="industryPhotoTitle">📸 Photo Studios</h4>
+          <p data-translate="industryPhotoDesc">
+            Send pickup alerts and updates to customers who approved to receive notifications.
+          </p>
+        </div>
+        <div class="industry-card">
+          <h4 data-translate="industryRestaurantTitle">🍽️ Restaurants</h4>
+          <p data-translate="industryRestaurantDesc">
+            Share menus, confirm reservations, and send offers to customers who approved to receive messages.
+          </p>
+        </div>
+        <div class="industry-card">
+          <h4 data-translate="industryRealEstateTitle">🏦 Real Estate</h4>
+          <p data-translate="industryRealEstateDesc">Send listings, schedule visits, and follow-up with approved leads.</p>
+        </div>
+        <div class="industry-card">
+          <h4 data-translate="industryAgenciesTitle">🧑‍💼 Agencies</h4>
+          <p data-translate="industryAgenciesDesc">
+            Send campaign updates and client check-ins to approved contacts with rich templates.
+          </p>
+        </div>
+        <div class="industry-card">
+          <h4 data-translate="industryRepairTitle">🛠️ Repair Services</h4>
+          <p data-translate="industryRepairDesc">
+            Send job status updates, invoices, and post-service surveys to customers who approved to receive messages.
+          </p>
+        </div>
+        <div class="industry-card">
+          <h4 data-translate="industryInstitutionsTitle">🎓 Institutions</h4>
+          <p data-translate="industryInstitutionsDesc">
+            Send exam alerts, parent messages, or fee reminders to enrolled students and approved contacts.
+          </p>
+        </div>
+        <div class="industry-card">
+          <h4 data-translate="industryFreelancersTitle">🎨 Freelancers & Creatives</h4>
+          <p data-translate="industryFreelancersDesc">
+            Showcase new work, follow-up with approved leads, and send client
+            updates.
+          </p>
+        </div>
+        <div class="industry-card">
+          <h4 data-translate="industryHRTitle">💼 HR & Recruitment</h4>
+          <p data-translate="industryHRDesc">
+            Share job openings, schedule interviews, and update approved candidates via
+            WhatsApp.
+          </p>
+        </div>
+        <div class="industry-card">
+          <h4 data-translate="industryTutoringTitle">🏫 Tutoring Centers</h4>
+          <p data-translate="industryTutoringDesc">
+            Send daily reminders, quizzes, and updates to enrolled students who approved to receive messages.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- <section style="background-color: #ffffff;"> <h2 class="fade-in">What Our Users Say</h2> <div class="fade-in" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;"> <div style="max-width: 300px; padding: 1rem; border-radius: 8px; background: #f1f5f9;"> <p>"Arkaconnect helped us reach 2,000+ leads in just 3 days. The scheduling feature is gold!"</p> <strong>— Priya, Founder @ Handloom Co.</strong> </div> <div style="max-width: 300px; padding: 1rem; border-radius: 8px; background: #f1f5f9;"> <p>"I was blown away by how easy it is to automate follow-ups. It just works."</p> <strong>— Rahul, Freelance Coach</strong> </div> <div style="max-width: 300px; padding: 1rem; border-radius: 8px; background: #f1f5f9;"> <p>"Great customer service, intuitive dashboard, and perfect for early-stage businesses."</p> <strong>— Aarti, Shopify Store Owner</strong> </div> </div> </section> -->
+    <section>
+      <h2 class="fade-in" data-translate="whyChooseTitle">Why Choose ArkaConnect?</h2>
+      <div
+        class="fade-in"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          margin-top: 2rem;
+        "
+      >
+        <div style="max-width: 300px">
+          <h4 data-translate="whyChooseSmallTeamsTitle">✅ Built for Small Teams</h4>
+          <p data-translate="whyChooseSmallTeamsDesc">No complex setups. Just install, upload, and start messaging.</p>
+        </div>
+        <div style="max-width: 300px">
+          <h4 data-translate="whyChooseAffordableTitle">💰 Affordable Plans</h4>
+          <p data-translate="whyChooseAffordableDesc">
+            Flexible pricing — from free to enterprise. Pay only for what you
+            need.
+          </p>
+        </div>
+        <div style="max-width: 300px">
+          <h4 data-translate="whyChooseNoTechTitle">⚙️ No Tech Skills Required</h4>
+          <p data-translate="whyChooseNoTechDesc">Simple drag-and-drop workflows, and ready-to-use templates.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 class="fade-in">
+        <span data-translate="howItWorksTitle">How ArkaConnect Works</span>
+        <span style="font-size: 1em; color: #6b7280" data-translate="howItWorksSubtitle"
+          >(Features vary by plan)</span
+        >
+      </h2>
+      <div
+        class="fade-in"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 2rem;
+          margin-top: 2rem;
+        "
+      >
+        <div style="max-width: 200px; text-align: center">
+          <img
+            src="https://img.icons8.com/fluency/96/upload.png"
+            alt="Upload Contacts"
+            width="80"
+          />
+          <h4 data-translate="step1Title">1. Upload Contacts</h4>
+          <p data-translate="step1Desc">
+            Import your approved contact list via CSV or Excel with tags like name &
+            phone number or only phone number.
+          </p>
+        </div>
+        <img
+          src="https://img.icons8.com/ios-filled/50/arrow.png"
+          alt="Arrow"
+          width="40"
+          style="align-self: center"
+        />
+        <div style="max-width: 200px; text-align: center">
+          <img
+            src="https://img.icons8.com/fluency/96/template.png"
+            alt="Message Templates"
+            width="80"
+          />
+          <h4 data-translate="step2Title">2. Create Templates</h4>
+          <p data-translate="step2Desc">
+            Build personalized WhatsApp messages with placeholders like {name},
+            {promo}.
+          </p>
+        </div>
+        <img
+          src="https://img.icons8.com/ios-filled/50/arrow.png"
+          alt="Arrow"
+          width="40"
+          style="align-self: center"
+        />
+        <div style="max-width: 200px; text-align: center">
+          <img
+            src="https://img.icons8.com/fluency/96/planner.png"
+            alt="Schedule"
+            width="80"
+          />
+          <h4 data-translate="step3Title">3. Schedule or Send</h4>
+          <p data-translate="step3Desc">
+            Choose when your messages go out – instantly or at the perfect local
+            time.
+          </p>
+        </div>
+        <img
+          src="https://img.icons8.com/ios-filled/50/arrow.png"
+          alt="Arrow"
+          width="40"
+          style="align-self: center"
+        />
+        <div style="max-width: 200px; text-align: center">
+          <img
+            src="https://img.icons8.com/fluency/96/graph-report.png"
+            alt="Analytics"
+            width="80"
+          />
+          <h4 data-translate="step4Title">4. Track Results</h4>
+          <p data-translate="step4Desc">
+            See what works: opens, reads, responses — improve your next
+            campaign!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section style="padding: 3rem 1.5rem; background-color: #ffffff">
+      <h2 class="fade-in" style="text-align: center" data-translate="campaignFlowTitle">
+        What a Campaign Flow Looks Like
+      </h2>
+      <p
+        class="fade-in"
+        style="
+          text-align: center;
+          color: #4b5563;
+          max-width: 600px;
+          margin: 1rem auto;
+        "
+        data-translate="campaignFlowDesc"
+      >
+        Automate conversations that feel personal — engage with your approved contacts through notifications and updates. ArkaConnect handles the logic, follow-ups, and timing, so you can
+        focus on building relationships.
       </p>
-    </footer>
+      <div
+        class="fade-in"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          margin-top: 2rem;
+        "
+      >
+        <div style="max-width: 240px; text-align: center">
+          <img
+            src="https://img.icons8.com/fluency/96/chat-message.png"
+            alt="Welcome Message"
+            width="80"
+          />
+          <h4 data-translate="flowWelcomeTitle">👋 Welcome Message</h4>
+          <p data-translate="flowWelcomeDesc">
+            First message goes out to approved contacts instantly or on a schedule with
+            personalization.
+          </p>
+        </div>
+        <img
+          src="https://img.icons8.com/ios-filled/50/arrow.png"
+          alt="Arrow"
+          width="40"
+          style="align-self: center"
+        />
+        <div style="max-width: 240px; text-align: center">
+          <img
+            src="https://img.icons8.com/fluency/96/in-transit.png"
+            alt="Wait Timer"
+            width="80"
+          />
+          <h4 data-translate="flowWaitTitle">⏱ Wait & Track</h4>
+          <p data-translate="flowWaitDesc">
+            Wait 1–2 days. If no reply or action, automatically prepare a
+            follow-up.
+          </p>
+        </div>
+        <img
+          src="https://img.icons8.com/ios-filled/50/arrow.png"
+          alt="Arrow"
+          width="40"
+          style="align-self: center"
+        />
+        <div style="max-width: 240px; text-align: center">
+          <img
+            src="https://img.icons8.com/fluency/96/reminder.png"
+            alt="Follow-up"
+            width="80"
+          />
+          <h4 data-translate="flowFollowupTitle">📣 Follow-up</h4>
+          <p data-translate="flowFollowupDesc">Send a gentle nudge, offer, or CTA. All logic handled by ArkaConnect.</p>
+        </div>
+        <img
+          src="https://img.icons8.com/ios-filled/50/arrow.png"
+          alt="Arrow"
+          width="40"
+          style="align-self: center"
+        />
+        <div style="max-width: 240px; text-align: center">
+          <img
+            src="https://img.icons8.com/fluency/96/user-male-circle.png"
+            alt="Lead"
+            width="80"
+          />
+          <h4 data-translate="flowLeadTitle">🎯 Become a Lead</h4>
+          <p data-translate="flowLeadDesc">
+            Once the user replies or clicks — they're marked as a warm lead.
+          </p>
+        </div>
+        <img
+          src="https://img.icons8.com/ios-filled/50/arrow.png"
+          alt="Arrow"
+          width="40"
+          style="align-self: center"
+        />
+        <div style="max-width: 240px; text-align: center">
+          <img
+            src="https://img.icons8.com/fluency/96/settings-3.png"
+            alt="Next Step"
+            width="80"
+          />
+          <h4 data-translate="flowAutomationTitle">🔄 Next Automation</h4>
+          <p data-translate="flowAutomationDesc">
+            Trigger next steps: notify team, tag user, or move to nurture flow.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 class="fade-in" data-translate="pricingTitle">Choose Your Plan</h2>
+      <div class="plans fade-in" style="animation-delay: 0.3s">
+        <div class="plan-card">
+          <div class="plan-title" data-translate="planFreeTitle">Free</div>
+          <div class="plan-price" data-translate="planFreePrice">$0 / mo</div>
+          <ul class="features">
+            <li data-translate="planFreeFeature1">50 messages / day to approved contacts</li>
+            <li data-translate="planFreeFeature2">2 message templates</li>
+            <li data-translate="planFreeFeature3">Basic analytics</li>
+            <li data-translate="planFreeFeature4">Limited Folder Watch and CSV upload</li>
+            <li data-translate="planFreeFeature5">Community support</li>
+          </ul>
+        </div>
+        <div class="plan-card">
+          <div class="plan-title" data-translate="planProTitle">ArkaConnect Pro</div>
+          <div class="plan-price" data-translate="planProPrice">$12 / mo</div>
+          <ul class="features">
+            <li data-translate="planProFeature1">500 messages / day to approved contacts</li>
+            <li data-translate="planProFeature2">10 templates + scheduling</li>
+            <li data-translate="planProFeature3">CSV upload, folder watch</li>
+            <li data-translate="planProFeature4">Email support + basic automation</li>
+          </ul>
+        </div>
+        <div class="plan-card">
+          <div class="plan-title" data-translate="planBusinessTitle">ArkaConnect Business</div>
+          <div class="plan-price" data-translate="planBusinessPrice">$39 / mo</div>
+          <ul class="features">
+            <li data-translate="planBusinessFeature1">2,000 messages / day to approved contacts</li>
+            <li data-translate="planBusinessFeature2">Unlimited templates + media support</li>
+            <li data-translate="planBusinessFeature3">Automation workflows</li>
+            <li data-translate="planBusinessFeature4">Multi-user access & permissions</li>
+          </ul>
+        </div>
+        <div class="plan-card">
+          <div class="plan-title" data-translate="planEnterpriseTitle">ArkaQuantum (Enterprise)</div>
+          <div class="plan-price" data-translate="planEnterprisePrice">Custom Pricing</div>
+          <ul class="features">
+            <li data-translate="planEnterpriseFeature1">Higher message limits for approved contacts</li>
+            <li data-translate="planEnterpriseFeature2">Global delivery optimization</li>
+            <li data-translate="planEnterpriseFeature3">Advanced analytics & API access</li>
+            <li data-translate="planEnterpriseFeature4">Dedicated account manager</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section
+      style="
+        text-align: center;
+        padding: 3rem 1.5rem;
+        background-color: var(--accent);
+        color: white;
+      "
+    >
+      <h2 style="margin-bottom: 1rem" data-translate="finalCTATitle">
+        Ready to Engage with Your Approved Contacts?
+      </h2>
+      <p style="font-size: 1.1rem" data-translate="finalCTASubtitle">Start free today, no credit card needed.</p>
+      <a
+        href="#get-started"
+        style="
+          display: inline-block;
+          margin-top: 1rem;
+          padding: 0.8rem 1.5rem;
+          background: white;
+          color: var(--accent);
+          border-radius: 8px;
+          font-weight: 600;
+          text-decoration: none;
+        "
+        data-translate="finalCTAButton"
+      >
+        Get Started Free
+      </a>
+    </section>
+    <footer data-translate="footerText">An Arkasoft Product · © 2025</footer>
+    <script src="constants.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <script>
+      // Wait for constants.js to load
+      function waitForTranslations(callback) {
+        if (typeof TRANSLATIONS !== 'undefined') {
+          callback();
+        } else {
+          setTimeout(function() {
+            waitForTranslations(callback);
+          }, 50);
+        }
+      }
+      
+      // Translation Function
+      function translatePage(lang) {
+        if (typeof TRANSLATIONS === 'undefined') {
+          console.warn('Translations not loaded yet');
+          return;
+        }
+        
+        if (!TRANSLATIONS[lang]) {
+          lang = 'en'; // Default to English if language not found
+        }
+        
+        const translations = TRANSLATIONS[lang];
+        const elements = document.querySelectorAll('[data-translate]');
+        
+        elements.forEach(function(element) {
+          const key = element.getAttribute('data-translate');
+          if (translations[key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+              element.value = translations[key];
+            } else {
+              element.textContent = translations[key];
+            }
+          }
+        });
+        
+        // Update HTML lang attribute
+        document.documentElement.setAttribute('lang', lang);
+      }
+      
+      // Show Language Selector Modal
+      function showLanguageSelector() {
+        const selector = document.getElementById('languageSelector');
+        if (selector) {
+          selector.classList.remove('hidden');
+          selector.style.display = 'flex';
+        }
+      }
+      
+      // Language Selector Functionality
+      function selectLanguage(lang) {
+        const selector = document.getElementById('languageSelector');
+        if (selector) {
+          selector.classList.add('hidden');
+          selector.style.display = 'none';
+        }
+        
+        // Translate the page
+        waitForTranslations(function() {
+          translatePage(lang);
+        });
+      }
+      
+      // Initialize on page load
+      window.addEventListener('DOMContentLoaded', function() {
+        // Modal is hidden by default, button is always visible
+        const selector = document.getElementById('languageSelector');
+        if (selector) {
+          selector.classList.add('hidden');
+        }
+        
+        // Default to English
+        waitForTranslations(function() {
+          translatePage('en');
+        });
+      });
+      
+      // Lottie Animation
+      const animation = lottie.loadAnimation({
+        container: document.getElementById("lottie-animation"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "https://assets5.lottiefiles.com/packages/lf20_j1adxtyb.json",
+      });
+    </script>
   </body>
 </html>
