@@ -1,7 +1,5 @@
-// Language Constants for ArkaConnect
 const TRANSLATIONS = {
   en: {
-    // Language Selector
     "langSelectorTitle": "Choose Your Language",
     "langSelectorSubtitle": "Please select your preferred language to continue",
     "langEnglish": "English",
@@ -9,16 +7,13 @@ const TRANSLATIONS = {
     "langTamil": "தமிழ் (Tamil)",
     "translateButtonText": "Click to Translate",
     
-    // Header
     "headerTitle": "Automate WhatsApp for Your Business with",
     "headerSubtitle": "Send WhatsApp messages to your approved contacts, schedule campaigns, and engage with people who agreed to receive messages — all in one powerful, no-code tool.",
     
-    // CTA Section
     "ctaTitle": "Start Automating Your WhatsApp Campaigns Today",
     "ctaSubtitle": "Join thousands of small businesses using ArkaConnect to engage with their approved contacts. No credit card needed.",
     "ctaButton": "Try ArkaConnect Free",
     
-    // Features Section
     "featuresTitle": "Powerful Features at Your Fingertips",
     "featurePersonalizedTitle": "📤 Personalized Messaging",
     "featurePersonalizedDesc": "Send personalized messages to your approved contacts. Save time and engage efficiently.",
@@ -29,7 +24,6 @@ const TRANSLATIONS = {
     "featureAutomationTitle": "🧠 Automation Workflows",
     "featureAutomationDesc": "Trigger messages based on user behavior, file updates, or custom flows. No code needed.",
     
-    // Industries Section
     "industriesTitle": "Perfect for Every Business",
     "industryEcommerceTitle": "🛍️ E-commerce",
     "industryEcommerceDesc": "Send cart reminders, promotional updates, and loyalty messages to customers who approved to receive messages.",
@@ -56,7 +50,6 @@ const TRANSLATIONS = {
     "industryTutoringTitle": "🏫 Tutoring Centers",
     "industryTutoringDesc": "Send daily reminders, quizzes, and updates to enrolled students who approved to receive messages.",
     
-    // Why Choose Section
     "whyChooseTitle": "Why Choose ArkaConnect?",
     "whyChooseSmallTeamsTitle": "✅ Built for Small Teams",
     "whyChooseSmallTeamsDesc": "No complex setups. Just install, upload, and start messaging.",
@@ -65,7 +58,6 @@ const TRANSLATIONS = {
     "whyChooseNoTechTitle": "⚙️ No Tech Skills Required",
     "whyChooseNoTechDesc": "Simple drag-and-drop workflows, and ready-to-use templates.",
     
-    // How It Works Section
     "howItWorksTitle": "How ArkaConnect Works",
     "howItWorksSubtitle": "(Features vary by plan)",
     "step1Title": "1. Upload Contacts",
@@ -77,7 +69,6 @@ const TRANSLATIONS = {
     "step4Title": "4. Track Results",
     "step4Desc": "See what works: opens, reads, responses — improve your next campaign!",
     
-    // Campaign Flow Section
     "campaignFlowTitle": "What a Campaign Flow Looks Like",
     "campaignFlowDesc": "Automate conversations that feel personal — engage with your approved contacts through notifications and updates. ArkaConnect handles the logic, follow-ups, and timing, so you can focus on building relationships.",
     "flowWelcomeTitle": "👋 Welcome Message",
@@ -91,7 +82,6 @@ const TRANSLATIONS = {
     "flowAutomationTitle": "🔄 Next Automation",
     "flowAutomationDesc": "Trigger next steps: notify team, tag user, or move to nurture flow.",
     
-    // Pricing Section
     "pricingTitle": "Choose Your Plan",
     "planFreeTitle": "Free",
     "planFreePrice": "$0 / mo",
@@ -118,18 +108,15 @@ const TRANSLATIONS = {
     "planEnterpriseFeature2": "Global delivery optimization",
     "planEnterpriseFeature3": "Advanced analytics & API access",
     "planEnterpriseFeature4": "Dedicated account manager",
-    
-    // Final CTA
+
     "finalCTATitle": "Ready to Engage with Your Approved Contacts?",
     "finalCTASubtitle": "Start free today, no credit card needed.",
     "finalCTAButton": "Get Started Free",
     
-    // Footer
     "footerText": "An Arkasoft Product · © 2025"
   },
   
   hi: {
-    // Language Selector
     "langSelectorTitle": "अपनी भाषा चुनें",
     "langSelectorSubtitle": "कृपया जारी रखने के लिए अपनी पसंदीदा भाषा चुनें",
     "langEnglish": "English",
@@ -137,16 +124,13 @@ const TRANSLATIONS = {
     "langTamil": "தமிழ் (Tamil)",
     "translateButtonText": "अनुवाद करने के लिए क्लिक करें",
     
-    // Header
     "headerTitle": "अपने व्यवसाय के लिए WhatsApp को स्वचालित करें",
     "headerSubtitle": "अपने अनुमोदित संपर्कों को WhatsApp संदेश भेजें, अभियान शेड्यूल करें, और संदेश प्राप्त करने के लिए सहमत लोगों के साथ जुड़ें — सभी एक शक्तिशाली, नो-कोड टूल में।",
     
-    // CTA Section
     "ctaTitle": "आज ही अपने WhatsApp अभियानों को स्वचालित करना शुरू करें",
     "ctaSubtitle": "अपने अनुमोदित संपर्कों के साथ जुड़ने के लिए ArkaConnect का उपयोग करने वाले हजारों छोटे व्यवसायों में शामिल हों। क्रेडिट कार्ड की आवश्यकता नहीं।",
     "ctaButton": "ArkaConnect मुफ्त में आज़माएं",
     
-    // Features Section
     "featuresTitle": "आपकी उंगलियों पर शक्तिशाली सुविधाएं",
     "featurePersonalizedTitle": "📤 व्यक्तिगत संदेश",
     "featurePersonalizedDesc": "अपने अनुमोदित संपर्कों को व्यक्तिगत संदेश भेजें। समय बचाएं और कुशलता से जुड़ें।",
@@ -157,7 +141,6 @@ const TRANSLATIONS = {
     "featureAutomationTitle": "🧠 स्वचालन वर्कफ़्लो",
     "featureAutomationDesc": "उपयोगकर्ता व्यवहार, फ़ाइल अपडेट, या कस्टम फ़्लो के आधार पर संदेश ट्रिगर करें। कोड की आवश्यकता नहीं।",
     
-    // Industries Section
     "industriesTitle": "हर व्यवसाय के लिए परफेक्ट",
     "industryEcommerceTitle": "🛍️ ई-कॉमर्स",
     "industryEcommerceDesc": "ग्राहकों को कार्ट रिमाइंडर, प्रचार अपडेट, और वफादारी संदेश भेजें जिन्होंने संदेश प्राप्त करने के लिए अनुमोदन दिया है।",
@@ -184,7 +167,6 @@ const TRANSLATIONS = {
     "industryTutoringTitle": "🏫 ट्यूशन सेंटर",
     "industryTutoringDesc": "नामांकित छात्रों को दैनिक रिमाइंडर, क्विज़, और अपडेट भेजें जिन्होंने संदेश प्राप्त करने के लिए अनुमोदन दिया है।",
     
-    // Why Choose Section
     "whyChooseTitle": "ArkaConnect क्यों चुनें?",
     "whyChooseSmallTeamsTitle": "✅ छोटी टीमों के लिए बनाया गया",
     "whyChooseSmallTeamsDesc": "कोई जटिल सेटअप नहीं। बस इंस्टॉल करें, अपलोड करें, और मैसेजिंग शुरू करें।",
@@ -193,7 +175,6 @@ const TRANSLATIONS = {
     "whyChooseNoTechTitle": "⚙️ तकनीकी कौशल की आवश्यकता नहीं",
     "whyChooseNoTechDesc": "सरल ड्रैग-एंड-ड्रॉप वर्कफ़्लो, और तैयार-से-उपयोग टेम्प्लेट।",
     
-    // How It Works Section
     "howItWorksTitle": "ArkaConnect कैसे काम करता है",
     "howItWorksSubtitle": "(सुविधाएं योजना के अनुसार भिन्न होती हैं)",
     "step1Title": "1. संपर्क अपलोड करें",
@@ -205,7 +186,6 @@ const TRANSLATIONS = {
     "step4Title": "4. परिणाम ट्रैक करें",
     "step4Desc": "देखें कि क्या काम करता है: खुलता है, पढ़ता है, प्रतिक्रियाएं — अपने अगले अभियान में सुधार करें!",
     
-    // Campaign Flow Section
     "campaignFlowTitle": "एक अभियान फ़्लो कैसा दिखता है",
     "campaignFlowDesc": "बातचीत को स्वचालित करें जो व्यक्तिगत लगती है — सूचनाओं और अपडेट के माध्यम से अपने अनुमोदित संपर्कों के साथ जुड़ें। ArkaConnect तर्क, फॉलो-अप, और समय को संभालता है, ताकि आप रिश्ते बनाने पर ध्यान केंद्रित कर सकें।",
     "flowWelcomeTitle": "👋 स्वागत संदेश",
@@ -219,7 +199,6 @@ const TRANSLATIONS = {
     "flowAutomationTitle": "🔄 अगला स्वचालन",
     "flowAutomationDesc": "अगले चरण ट्रिगर करें: टीम को सूचित करें, उपयोगकर्ता को टैग करें, या पोषण फ़्लो में ले जाएं।",
     
-    // Pricing Section
     "pricingTitle": "अपनी योजना चुनें",
     "planFreeTitle": "मुफ्त",
     "planFreePrice": "$0 / माह",
@@ -247,17 +226,14 @@ const TRANSLATIONS = {
     "planEnterpriseFeature3": "उन्नत विश्लेषण और API एक्सेस",
     "planEnterpriseFeature4": "समर्पित खाता प्रबंधक",
     
-    // Final CTA
     "finalCTATitle": "अपने अनुमोदित संपर्कों के साथ जुड़ने के लिए तैयार हैं?",
     "finalCTASubtitle": "आज ही मुफ्त शुरू करें, क्रेडिट कार्ड की आवश्यकता नहीं।",
     "finalCTAButton": "मुफ्त में शुरू करें",
     
-    // Footer
     "footerText": "एक Arkasoft उत्पाद · © 2025"
   },
   
   ta: {
-    // Language Selector
     "langSelectorTitle": "உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்",
     "langSelectorSubtitle": "தொடர உங்கள் விருப்பமான மொழியைத் தேர்ந்தெடுக்கவும்",
     "langEnglish": "English",
@@ -265,16 +241,13 @@ const TRANSLATIONS = {
     "langTamil": "தமிழ் (Tamil)",
     "translateButtonText": "மொழிபெயர்க்க கிளிக் செய்யவும்",
     
-    // Header
     "headerTitle": "உங்கள் வணிகத்திற்கான WhatsApp ஐ தானியங்கமாக்குங்கள்",
     "headerSubtitle": "உங்கள் அனுமதிக்கப்பட்ட தொடர்புகளுக்கு WhatsApp செய்திகளை அனுப்பவும், பிரச்சாரங்களை திட்டமிடவும், செய்திகளைப் பெற ஒப்புக்கொண்ட நபர்களுடன் ஈடுபடவும் — அனைத்தும் ஒரு சக்திவாய்ந்த, குறியீடு-இல்லாத கருவியில்.",
     
-    // CTA Section
     "ctaTitle": "இன்றே உங்கள் WhatsApp பிரச்சாரங்களை தானியங்கமாக்கத் தொடங்குங்கள்",
     "ctaSubtitle": "அவர்களின் அனுமதிக்கப்பட்ட தொடர்புகளுடன் ஈடுபட ArkaConnect ஐப் பயன்படுத்தும் ஆயிரக்கணக்கான சிறு வணிகங்களில் சேரவும். கிரெடிட் கார்டு தேவையில்லை.",
     "ctaButton": "ArkaConnect இலவசமாக முயற்சிக்கவும்",
     
-    // Features Section
     "featuresTitle": "உங்கள் விரல்களில் சக்திவாய்ந்த அம்சங்கள்",
     "featurePersonalizedTitle": "📤 தனிப்பயனாக்கப்பட்ட செய்தி",
     "featurePersonalizedDesc": "உங்கள் அனுமதிக்கப்பட்ட தொடர்புகளுக்கு தனிப்பயனாக்கப்பட்ட செய்திகளை அனுப்பவும். நேரத்தைச் சேமிக்கவும் திறமையாக ஈடுபடவும்.",
@@ -285,7 +258,6 @@ const TRANSLATIONS = {
     "featureAutomationTitle": "🧠 தானியங்க பணிப்பாய்வுகள்",
     "featureAutomationDesc": "பயனர் நடத்தை, கோப்பு புதுப்பிப்புகள் அல்லது தனிப்பயன் பாய்வுகளின் அடிப்படையில் செய்திகளைத் தூண்டவும். குறியீடு தேவையில்லை.",
     
-    // Industries Section
     "industriesTitle": "எந்த வணிகத்திற்கும் சரியானது",
     "industryEcommerceTitle": "🛍️ மின் வணிகம்",
     "industryEcommerceDesc": "செய்திகளைப் பெற அனுமதித்த வாடிக்கையாளர்களுக்கு வண்டி நினைவூட்டல்கள், விளம்பர புதுப்பிப்புகள் மற்றும் விசுவாச செய்திகளை அனுப்பவும்.",
@@ -312,7 +284,6 @@ const TRANSLATIONS = {
     "industryTutoringTitle": "🏫 பயிற்சி மையங்கள்",
     "industryTutoringDesc": "செய்திகளைப் பெற அனுமதித்த பதிவுசெய்யப்பட்ட மாணவர்களுக்கு தினசரி நினைவூட்டல்கள், வினாடி வினாக்கள் மற்றும் புதுப்பிப்புகளை அனுப்பவும்.",
     
-    // Why Choose Section
     "whyChooseTitle": "ArkaConnect ஏன் தேர்ந்தெடுக்க வேண்டும்?",
     "whyChooseSmallTeamsTitle": "✅ சிறிய குழுக்களுக்காக கட்டப்பட்டது",
     "whyChooseSmallTeamsDesc": "சிக்கலான அமைப்புகள் இல்லை. நிறுவவும், பதிவேற்றவும் மற்றும் செய்தியிடலைத் தொடங்கவும்.",
@@ -321,7 +292,6 @@ const TRANSLATIONS = {
     "whyChooseNoTechTitle": "⚙️ தொழில்நுட்ப திறன்கள் தேவையில்லை",
     "whyChooseNoTechDesc": "எளிய இழுத்து-விடு பணிப்பாய்வுகள் மற்றும் பயன்படுத்தத் தயாரான வார்ப்புருக்கள்.",
     
-    // How It Works Section
     "howItWorksTitle": "ArkaConnect எவ்வாறு செயல்படுகிறது",
     "howItWorksSubtitle": "(அம்சங்கள் திட்டத்தின் படி மாறுபடும்)",
     "step1Title": "1. தொடர்புகளை பதிவேற்றவும்",
@@ -333,7 +303,6 @@ const TRANSLATIONS = {
     "step4Title": "4. முடிவுகளைக் கண்காணிக்கவும்",
     "step4Desc": "எது வேலை செய்கிறது என்பதைப் பாருங்கள்: திறக்கிறது, படிக்கிறது, பதில்கள் — உங்கள் அடுத்த பிரச்சாரத்தை மேம்படுத்துங்கள்!",
     
-    // Campaign Flow Section
     "campaignFlowTitle": "ஒரு பிரச்சார பாய்வு எப்படி இருக்கும்",
     "campaignFlowDesc": "தனிப்பட்டதாக உணரும் உரையாடல்களை தானியங்கமாக்குங்கள் — அறிவிப்புகள் மற்றும் புதுப்பிப்புகள் மூலம் உங்கள் அனுமதிக்கப்பட்ட தொடர்புகளுடன் ஈடுபடவும். ArkaConnect தர்க்கம், பின்தொடர்தல்கள் மற்றும் நேரத்தை கையாளுகிறது, எனவே நீங்கள் உறவுகளை உருவாக்குவதில் கவனம் செலுத்தலாம்.",
     "flowWelcomeTitle": "👋 வரவேற்பு செய்தி",
@@ -347,7 +316,6 @@ const TRANSLATIONS = {
     "flowAutomationTitle": "🔄 அடுத்த தானியங்கம்",
     "flowAutomationDesc": "அடுத்த படிகளைத் தூண்டவும்: குழுவை அறிவிக்கவும், பயனரைக் குறிக்கவும் அல்லது வளர்ப்பு பாய்வுக்கு நகர்த்தவும்.",
     
-    // Pricing Section
     "pricingTitle": "உங்கள் திட்டத்தைத் தேர்ந்தெடுக்கவும்",
     "planFreeTitle": "இலவசம்",
     "planFreePrice": "$0 / மாதம்",
@@ -375,12 +343,10 @@ const TRANSLATIONS = {
     "planEnterpriseFeature3": "மேம்பட்ட பகுப்பாய்வு மற்றும் API அணுகல்",
     "planEnterpriseFeature4": "அர்ப்பணிக்கப்பட்ட கணக்கு மேலாளர்",
     
-    // Final CTA
     "finalCTATitle": "உங்கள் அனுமதிக்கப்பட்ட தொடர்புகளுடன் ஈடுபட தயாரா?",
     "finalCTASubtitle": "இன்றே இலவசமாகத் தொடங்குங்கள், கிரெடிட் கார்டு தேவையில்லை.",
     "finalCTAButton": "இலவசமாகத் தொடங்குங்கள்",
     
-    // Footer
     "footerText": "ஒரு Arkasoft தயாரிப்பு · © 2025"
   }
 };

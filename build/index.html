@@ -13,8 +13,8 @@
     />
     <meta name="author" content="Arkaconnect Team" />
     <title>
-      WhatsApp Automation for Business | Approved Messaging & Campaign Scheduler |
-      ArkaConnect
+      WhatsApp Integration for Business | Approved Messaging & Campaign
+      Scheduler | ArkaConnect
     </title>
     <link
       rel="stylesheet"
@@ -176,6 +176,14 @@
         max-width: 240px;
         text-align: center;
       }
+      .greenText {
+        color: var(--accent);
+        font-weight: 600;
+      }
+      .redText {
+        color: #ef4444;
+        font-weight: 600;
+      }
       @media (max-width: 768px) {
         h1 {
           font-size: 1.8rem;
@@ -302,9 +310,7 @@
         position: fixed;
         bottom: 30px;
         right: 30px;
-        background-color: var(--accent);
-        color: white;
-        border: none;
+        border: 1px solid var(--accent);
         border-radius: 50px;
         padding: 1rem 1.5rem;
         font-size: 1rem;
@@ -334,7 +340,8 @@
         flex-shrink: 0;
       }
       @keyframes blink {
-        0%, 100% {
+        0%,
+        100% {
           opacity: 1;
           transform: scale(1);
         }
@@ -398,27 +405,43 @@
     </style>
   </head>
   <body>
-    <!-- Floating Translate Button -->
-    <button id="translateButton" class="translate-button" onclick="showLanguageSelector()">
+    <button
+      id="translateButton"
+      class="translate-button"
+      onclick="showLanguageSelector()"
+    >
       <span class="icon">🌐</span>
       <span data-translate="translateButtonText">Click to Translate</span>
     </button>
-    
-    <!-- Language Selector Modal -->
+
     <div id="languageSelector" class="language-selector-overlay hidden">
       <div class="language-selector-modal">
         <h3 data-translate="langSelectorTitle">Choose Your Language</h3>
-        <p data-translate="langSelectorSubtitle">Please select your preferred language to continue</p>
+        <p data-translate="langSelectorSubtitle">
+          Please select your preferred language to continue
+        </p>
         <div class="language-options">
-          <button class="language-btn" data-lang="en" onclick="selectLanguage('en')">
+          <button
+            class="language-btn"
+            data-lang="en"
+            onclick="selectLanguage('en')"
+          >
             <span class="flag">🇬🇧</span>
             <span data-translate="langEnglish">English</span>
           </button>
-          <button class="language-btn" data-lang="hi" onclick="selectLanguage('hi')">
+          <button
+            class="language-btn"
+            data-lang="hi"
+            onclick="selectLanguage('hi')"
+          >
             <span class="flag">🇮🇳</span>
             <span data-translate="langHindi">हिंदी (Hindi)</span>
           </button>
-          <button class="language-btn" data-lang="ta" onclick="selectLanguage('ta')">
+          <button
+            class="language-btn"
+            data-lang="ta"
+            onclick="selectLanguage('ta')"
+          >
             <span class="flag">🇮🇳</span>
             <span data-translate="langTamil">தமிழ் (Tamil)</span>
           </button>
@@ -427,12 +450,19 @@
     </div>
     <header>
       <h1 class="fade-in">
-        <span data-translate="headerTitle">Automate WhatsApp for Your Business with</span>
+        <span data-translate="headerTitle"
+          >Automate WhatsApp for Your Business with</span
+        >
         <span class="highlight">ArkaConnect</span>
       </h1>
-      <p class="subheading fade-in" style="animation-delay: 0.2s" data-translate="headerSubtitle">
-        Send WhatsApp messages to your approved contacts, schedule campaigns, and engage with people who agreed to receive messages — all
-        in one powerful, no-code tool.
+      <p
+        class="subheading fade-in"
+        style="animation-delay: 0.2s"
+        data-translate="headerSubtitle"
+      >
+        Send WhatsApp messages to your approved contacts, schedule campaigns,
+        and engage with people who agreed to receive messages — all in one
+        powerful, no-code tool.
       </p>
       <div
         id="lottie-animation"
@@ -451,13 +481,17 @@
         Start Automating Your WhatsApp Campaigns Today
       </h2>
       <p style="font-size: 1.1rem" data-translate="ctaSubtitle">
-        Join thousands of small businesses using ArkaConnect to engage with their approved contacts. No credit
-        card needed.
+        Join thousands of small businesses using ArkaConnect to engage with
+        their approved contacts. No credit card needed.
       </p>
-      <a href="#get-started" class="button" data-translate="ctaButton"> Try ArkaConnect Free </a>
+      <a href="#get-started" class="button" data-translate="ctaButton">
+        Try ArkaConnect Free
+      </a>
     </section>
     <section>
-      <h2 class="fade-in" data-translate="featuresTitle">Powerful Features at Your Fingertips</h2>
+      <h2 class="fade-in" data-translate="featuresTitle">
+        Powerful Features at Your Fingertips
+      </h2>
       <div
         class="fade-in"
         style="
@@ -469,7 +503,9 @@
         "
       >
         <div style="max-width: 260px">
-          <h4 data-translate="featurePersonalizedTitle">📤 Personalized Messaging</h4>
+          <h4 data-translate="featurePersonalizedTitle">
+            📤 Personalized Messaging
+          </h4>
           <p data-translate="featurePersonalizedDesc">
             Send personalized messages to your approved contacts. Save time and
             engage efficiently.
@@ -490,7 +526,9 @@
           </p>
         </div>
         <div style="max-width: 260px">
-          <h4 data-translate="featureAutomationTitle">🧠 Automation Workflows</h4>
+          <h4 data-translate="featureAutomationTitle">
+            🧠 Automation Workflows
+          </h4>
           <p data-translate="featureAutomationDesc">
             Trigger messages based on user behavior, file updates, or custom
             flows. No code needed.
@@ -499,7 +537,9 @@
       </div>
     </section>
     <section>
-      <h2 class="fade-in" data-translate="industriesTitle">Perfect for Every Business</h2>
+      <h2 class="fade-in" data-translate="industriesTitle">
+        Perfect for Every Business
+      </h2>
       <div
         class="fade-in"
         style="
@@ -513,55 +553,69 @@
         <div class="industry-card">
           <h4 data-translate="industryEcommerceTitle">🛍️ E-commerce</h4>
           <p data-translate="industryEcommerceDesc">
-            Send cart reminders, promotional updates, and loyalty messages to customers who approved to receive messages.
+            Send cart reminders, promotional updates, and loyalty messages to
+            customers who approved to receive messages.
           </p>
         </div>
         <div class="industry-card">
           <h4 data-translate="industryHealthcareTitle">🏥 Healthcare</h4>
           <p data-translate="industryHealthcareDesc">
-            Send appointment reminders, health tips, and follow-ups to patients who approved to receive messages.
+            Send appointment reminders, health tips, and follow-ups to patients
+            who approved to receive messages.
           </p>
         </div>
         <div class="industry-card">
           <h4 data-translate="industryEdtechTitle">📚 EdTech & Coaching</h4>
-          <p data-translate="industryEdtechDesc">Notify enrolled students, manage approved leads, and follow-up on enrollments.</p>
+          <p data-translate="industryEdtechDesc">
+            Notify enrolled students, manage approved leads, and follow-up on
+            enrollments.
+          </p>
         </div>
         <div class="industry-card">
           <h4 data-translate="industryPhotoTitle">📸 Photo Studios</h4>
           <p data-translate="industryPhotoDesc">
-            Send pickup alerts and updates to customers who approved to receive notifications.
+            Send pickup alerts and updates to customers who approved to receive
+            notifications.
           </p>
         </div>
         <div class="industry-card">
           <h4 data-translate="industryRestaurantTitle">🍽️ Restaurants</h4>
           <p data-translate="industryRestaurantDesc">
-            Share menus, confirm reservations, and send offers to customers who approved to receive messages.
+            Share menus, confirm reservations, and send offers to customers who
+            approved to receive messages.
           </p>
         </div>
         <div class="industry-card">
           <h4 data-translate="industryRealEstateTitle">🏦 Real Estate</h4>
-          <p data-translate="industryRealEstateDesc">Send listings, schedule visits, and follow-up with approved leads.</p>
+          <p data-translate="industryRealEstateDesc">
+            Send listings, schedule visits, and follow-up with approved leads.
+          </p>
         </div>
         <div class="industry-card">
           <h4 data-translate="industryAgenciesTitle">🧑‍💼 Agencies</h4>
           <p data-translate="industryAgenciesDesc">
-            Send campaign updates and client check-ins to approved contacts with rich templates.
+            Send campaign updates and client check-ins to approved contacts with
+            rich templates.
           </p>
         </div>
         <div class="industry-card">
           <h4 data-translate="industryRepairTitle">🛠️ Repair Services</h4>
           <p data-translate="industryRepairDesc">
-            Send job status updates, invoices, and post-service surveys to customers who approved to receive messages.
+            Send job status updates, invoices, and post-service surveys to
+            customers who approved to receive messages.
           </p>
         </div>
         <div class="industry-card">
           <h4 data-translate="industryInstitutionsTitle">🎓 Institutions</h4>
           <p data-translate="industryInstitutionsDesc">
-            Send exam alerts, parent messages, or fee reminders to enrolled students and approved contacts.
+            Send exam alerts, parent messages, or fee reminders to enrolled
+            students and approved contacts.
           </p>
         </div>
         <div class="industry-card">
-          <h4 data-translate="industryFreelancersTitle">🎨 Freelancers & Creatives</h4>
+          <h4 data-translate="industryFreelancersTitle">
+            🎨 Freelancers & Creatives
+          </h4>
           <p data-translate="industryFreelancersDesc">
             Showcase new work, follow-up with approved leads, and send client
             updates.
@@ -570,21 +624,24 @@
         <div class="industry-card">
           <h4 data-translate="industryHRTitle">💼 HR & Recruitment</h4>
           <p data-translate="industryHRDesc">
-            Share job openings, schedule interviews, and update approved candidates via
-            WhatsApp.
+            Share job openings, schedule interviews, and update approved
+            candidates via WhatsApp.
           </p>
         </div>
         <div class="industry-card">
           <h4 data-translate="industryTutoringTitle">🏫 Tutoring Centers</h4>
           <p data-translate="industryTutoringDesc">
-            Send daily reminders, quizzes, and updates to enrolled students who approved to receive messages.
+            Send daily reminders, quizzes, and updates to enrolled students who
+            approved to receive messages.
           </p>
         </div>
       </div>
     </section>
     <!-- <section style="background-color: #ffffff;"> <h2 class="fade-in">What Our Users Say</h2> <div class="fade-in" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;"> <div style="max-width: 300px; padding: 1rem; border-radius: 8px; background: #f1f5f9;"> <p>"Arkaconnect helped us reach 2,000+ leads in just 3 days. The scheduling feature is gold!"</p> <strong>— Priya, Founder @ Handloom Co.</strong> </div> <div style="max-width: 300px; padding: 1rem; border-radius: 8px; background: #f1f5f9;"> <p>"I was blown away by how easy it is to automate follow-ups. It just works."</p> <strong>— Rahul, Freelance Coach</strong> </div> <div style="max-width: 300px; padding: 1rem; border-radius: 8px; background: #f1f5f9;"> <p>"Great customer service, intuitive dashboard, and perfect for early-stage businesses."</p> <strong>— Aarti, Shopify Store Owner</strong> </div> </div> </section> -->
     <section>
-      <h2 class="fade-in" data-translate="whyChooseTitle">Why Choose ArkaConnect?</h2>
+      <h2 class="fade-in" data-translate="whyChooseTitle">
+        Why Choose ArkaConnect?
+      </h2>
       <div
         class="fade-in"
         style="
@@ -595,8 +652,12 @@
         "
       >
         <div style="max-width: 300px">
-          <h4 data-translate="whyChooseSmallTeamsTitle">✅ Built for Small Teams</h4>
-          <p data-translate="whyChooseSmallTeamsDesc">No complex setups. Just install, upload, and start messaging.</p>
+          <h4 data-translate="whyChooseSmallTeamsTitle">
+            ✅ Built for Small Teams
+          </h4>
+          <p data-translate="whyChooseSmallTeamsDesc">
+            No complex setups. Just install, upload, and start messaging.
+          </p>
         </div>
         <div style="max-width: 300px">
           <h4 data-translate="whyChooseAffordableTitle">💰 Affordable Plans</h4>
@@ -606,15 +667,21 @@
           </p>
         </div>
         <div style="max-width: 300px">
-          <h4 data-translate="whyChooseNoTechTitle">⚙️ No Tech Skills Required</h4>
-          <p data-translate="whyChooseNoTechDesc">Simple drag-and-drop workflows, and ready-to-use templates.</p>
+          <h4 data-translate="whyChooseNoTechTitle">
+            ⚙️ No Tech Skills Required
+          </h4>
+          <p data-translate="whyChooseNoTechDesc">
+            Simple drag-and-drop workflows, and ready-to-use templates.
+          </p>
         </div>
       </div>
     </section>
     <section>
       <h2 class="fade-in">
         <span data-translate="howItWorksTitle">How ArkaConnect Works</span>
-        <span style="font-size: 1em; color: #6b7280" data-translate="howItWorksSubtitle"
+        <span
+          style="font-size: 1em; color: #6b7280"
+          data-translate="howItWorksSubtitle"
           >(Features vary by plan)</span
         >
       </h2>
@@ -636,8 +703,8 @@
           />
           <h4 data-translate="step1Title">1. Upload Contacts</h4>
           <p data-translate="step1Desc">
-            Import your approved contact list via CSV or Excel with tags like name &
-            phone number or only phone number.
+            Import your approved contact list via CSV or Excel with tags like
+            name & phone number or only phone number.
           </p>
         </div>
         <img
@@ -697,7 +764,11 @@
       </div>
     </section>
     <section style="padding: 3rem 1.5rem; background-color: #ffffff">
-      <h2 class="fade-in" style="text-align: center" data-translate="campaignFlowTitle">
+      <h2
+        class="fade-in"
+        style="text-align: center"
+        data-translate="campaignFlowTitle"
+      >
         What a Campaign Flow Looks Like
       </h2>
       <p
@@ -710,8 +781,10 @@
         "
         data-translate="campaignFlowDesc"
       >
-        Automate conversations that feel personal — engage with your approved contacts through notifications and updates. ArkaConnect handles the logic, follow-ups, and timing, so you can
-        focus on building relationships.
+        Automate conversations that feel personal — engage with your approved
+        contacts through notifications and updates. ArkaConnect handles the
+        logic, follow-ups, and timing, so you can focus on building
+        relationships.
       </p>
       <div
         class="fade-in"
@@ -732,8 +805,8 @@
           />
           <h4 data-translate="flowWelcomeTitle">👋 Welcome Message</h4>
           <p data-translate="flowWelcomeDesc">
-            First message goes out to approved contacts instantly or on a schedule with
-            personalization.
+            First message goes out to approved contacts instantly or on a
+            schedule with personalization.
           </p>
         </div>
         <img
@@ -767,7 +840,10 @@
             width="80"
           />
           <h4 data-translate="flowFollowupTitle">📣 Follow-up</h4>
-          <p data-translate="flowFollowupDesc">Send a gentle nudge, offer, or CTA. All logic handled by ArkaConnect.</p>
+          <p data-translate="flowFollowupDesc">
+            Send a gentle nudge, offer, or CTA. All logic handled by
+            ArkaConnect.
+          </p>
         </div>
         <img
           src="https://img.icons8.com/ios-filled/50/arrow.png"
@@ -812,41 +888,73 @@
           <div class="plan-title" data-translate="planFreeTitle">Free</div>
           <div class="plan-price" data-translate="planFreePrice">$0 / mo</div>
           <ul class="features">
-            <li data-translate="planFreeFeature1">50 messages / day to approved contacts</li>
+            <li data-translate="planFreeFeature1">
+              50 messages / day to approved contacts
+            </li>
             <li data-translate="planFreeFeature2">2 message templates</li>
             <li data-translate="planFreeFeature3">Basic analytics</li>
-            <li data-translate="planFreeFeature4">Limited Folder Watch and CSV upload</li>
+            <li data-translate="planFreeFeature4">
+              Limited Folder Watch and CSV upload
+            </li>
             <li data-translate="planFreeFeature5">Community support</li>
           </ul>
         </div>
         <div class="plan-card">
-          <div class="plan-title" data-translate="planProTitle">ArkaConnect Pro</div>
+          <div class="plan-title" data-translate="planProTitle">
+            ArkaConnect Pro
+          </div>
           <div class="plan-price" data-translate="planProPrice">$12 / mo</div>
           <ul class="features">
-            <li data-translate="planProFeature1">500 messages / day to approved contacts</li>
+            <li data-translate="planProFeature1">
+              500 messages / day to approved contacts
+            </li>
             <li data-translate="planProFeature2">10 templates + scheduling</li>
             <li data-translate="planProFeature3">CSV upload, folder watch</li>
-            <li data-translate="planProFeature4">Email support + basic automation</li>
+            <li data-translate="planProFeature4">
+              Email support + basic automation
+            </li>
           </ul>
         </div>
         <div class="plan-card">
-          <div class="plan-title" data-translate="planBusinessTitle">ArkaConnect Business</div>
-          <div class="plan-price" data-translate="planBusinessPrice">$39 / mo</div>
+          <div class="plan-title" data-translate="planBusinessTitle">
+            ArkaConnect Business
+          </div>
+          <div class="plan-price" data-translate="planBusinessPrice">
+            $39 / mo
+          </div>
           <ul class="features">
-            <li data-translate="planBusinessFeature1">2,000 messages / day to approved contacts</li>
-            <li data-translate="planBusinessFeature2">Unlimited templates + media support</li>
+            <li data-translate="planBusinessFeature1">
+              2,000 messages / day to approved contacts
+            </li>
+            <li data-translate="planBusinessFeature2">
+              Unlimited templates + media support
+            </li>
             <li data-translate="planBusinessFeature3">Automation workflows</li>
-            <li data-translate="planBusinessFeature4">Multi-user access & permissions</li>
+            <li data-translate="planBusinessFeature4">
+              Multi-user access & permissions
+            </li>
           </ul>
         </div>
         <div class="plan-card">
-          <div class="plan-title" data-translate="planEnterpriseTitle">ArkaQuantum (Enterprise)</div>
-          <div class="plan-price" data-translate="planEnterprisePrice">Custom Pricing</div>
+          <div class="plan-title" data-translate="planEnterpriseTitle">
+            ArkaQuantum (Enterprise)
+          </div>
+          <div class="plan-price" data-translate="planEnterprisePrice">
+            Custom Pricing
+          </div>
           <ul class="features">
-            <li data-translate="planEnterpriseFeature1">Higher message limits for approved contacts</li>
-            <li data-translate="planEnterpriseFeature2">Global delivery optimization</li>
-            <li data-translate="planEnterpriseFeature3">Advanced analytics & API access</li>
-            <li data-translate="planEnterpriseFeature4">Dedicated account manager</li>
+            <li data-translate="planEnterpriseFeature1">
+              Higher message limits for approved contacts
+            </li>
+            <li data-translate="planEnterpriseFeature2">
+              Global delivery optimization
+            </li>
+            <li data-translate="planEnterpriseFeature3">
+              Advanced analytics & API access
+            </li>
+            <li data-translate="planEnterpriseFeature4">
+              Dedicated account manager
+            </li>
           </ul>
         </div>
       </div>
@@ -862,7 +970,9 @@
       <h2 style="margin-bottom: 1rem" data-translate="finalCTATitle">
         Ready to Engage with Your Approved Contacts?
       </h2>
-      <p style="font-size: 1.1rem" data-translate="finalCTASubtitle">Start free today, no credit card needed.</p>
+      <p style="font-size: 1.1rem" data-translate="finalCTASubtitle">
+        Start free today, no credit card needed.
+      </p>
       <a
         href="#get-started"
         style="
@@ -886,81 +996,81 @@
     <script>
       // Wait for constants.js to load
       function waitForTranslations(callback) {
-        if (typeof TRANSLATIONS !== 'undefined') {
+        if (typeof TRANSLATIONS !== "undefined") {
           callback();
         } else {
-          setTimeout(function() {
+          setTimeout(function () {
             waitForTranslations(callback);
           }, 50);
         }
       }
-      
+
       // Translation Function
       function translatePage(lang) {
-        if (typeof TRANSLATIONS === 'undefined') {
-          console.warn('Translations not loaded yet');
+        if (typeof TRANSLATIONS === "undefined") {
+          console.warn("Translations not loaded yet");
           return;
         }
-        
+
         if (!TRANSLATIONS[lang]) {
-          lang = 'en'; // Default to English if language not found
+          lang = "en"; // Default to English if language not found
         }
-        
+
         const translations = TRANSLATIONS[lang];
-        const elements = document.querySelectorAll('[data-translate]');
-        
-        elements.forEach(function(element) {
-          const key = element.getAttribute('data-translate');
+        const elements = document.querySelectorAll("[data-translate]");
+
+        elements.forEach(function (element) {
+          const key = element.getAttribute("data-translate");
           if (translations[key]) {
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
               element.value = translations[key];
             } else {
               element.textContent = translations[key];
             }
           }
         });
-        
+
         // Update HTML lang attribute
-        document.documentElement.setAttribute('lang', lang);
+        document.documentElement.setAttribute("lang", lang);
       }
-      
+
       // Show Language Selector Modal
       function showLanguageSelector() {
-        const selector = document.getElementById('languageSelector');
+        const selector = document.getElementById("languageSelector");
         if (selector) {
-          selector.classList.remove('hidden');
-          selector.style.display = 'flex';
+          selector.classList.remove("hidden");
+          selector.style.display = "flex";
         }
       }
-      
+
       // Language Selector Functionality
       function selectLanguage(lang) {
-        const selector = document.getElementById('languageSelector');
+        const selector = document.getElementById("languageSelector");
         if (selector) {
-          selector.classList.add('hidden');
-          selector.style.display = 'none';
+          selector.classList.add("hidden");
+          selector.style.display = "none";
         }
-        
+
         // Translate the page
-        waitForTranslations(function() {
+        waitForTranslations(function () {
           translatePage(lang);
         });
       }
-      
+
       // Initialize on page load
-      window.addEventListener('DOMContentLoaded', function() {
+      window.addEventListener("DOMContentLoaded", function () {
         // Modal is hidden by default, button is always visible
-        const selector = document.getElementById('languageSelector');
+        const selector = document.getElementById("languageSelector");
         if (selector) {
-          selector.classList.add('hidden');
+          selector.classList.add("hidden");
         }
-        
+
         // Default to English
-        waitForTranslations(function() {
-          translatePage('en');
+        waitForTranslations(function () {
+          translatePage("en");
         });
       });
-      
+
       // Lottie Animation
       const animation = lottie.loadAnimation({
         container: document.getElementById("lottie-animation"),
