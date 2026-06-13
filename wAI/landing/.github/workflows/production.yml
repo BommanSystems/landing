@@ -1,68 +1,47 @@
-name: Production
+name: Production-Client
 
 on:
   workflow_dispatch:
     inputs:
-      branch:
-        description: "Branch to deploy"
-        required: true
-        default: "main"
-        type: string
       email:
-        description: "Deployment email"
+        description: "Enter deployment email"
         required: true
         type: string
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   verify:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      id-token: write
+      pull-requests: read
 
     steps:
-      - name: Validate branch input
+      - name: Verify email from input
+        id: verify-email
         run: |
-          BRANCH="${{ github.event.inputs.branch }}"
-          if [ -z "$BRANCH" ]; then
-            echo "Branch name cannot be empty."
-            exit 1
-          fi
-          echo "Branch to deploy: $BRANCH"
+          INPUT_EMAIL="${{ github.event.inputs.email }}"
+          AUTHORIZED_EMAIL="${{ secrets.DEPLOYMENT_EMAIL }}"
 
-      - name: Verify user and email authorization
-        env:
-          ACCESS_JSON: ${{ secrets.DEPLOYMENT_ACCESS }}
-          INPUT_EMAIL: ${{ github.event.inputs.email }}
-          ACTOR: ${{ github.actor }}
-        run: |
-          if [ -z "$ACCESS_JSON" ]; then
-            echo "DEPLOYMENT_ACCESS secret is not set"
+          echo "Input email: $INPUT_EMAIL"
+          echo "Authorized email from secrets: $AUTHORIZED_EMAIL"
+
+          if [ -z "$AUTHORIZED_EMAIL" ]; then
+            echo "DEPLOYMENT_EMAIL secret is not set in repository secrets."
             exit 1
           fi
 
-          AUTHORIZED_EMAIL=$(echo "$ACCESS_JSON" | jq -r --arg user "$ACTOR" '.[$user]')
-
-          if [ "$AUTHORIZED_EMAIL" = "null" ]; then
-            echo "User '$ACTOR' is not authorized to deploy"
+          if [ "$INPUT_EMAIL" = "$AUTHORIZED_EMAIL" ]; then
+            echo "Email verification passed"
+            echo "verified=true" >> $GITHUB_OUTPUT
+          else
+            echo "Email verification failed. Input email does not match authorized email."
             exit 1
           fi
-
-          if [ "$INPUT_EMAIL" != "$AUTHORIZED_EMAIL" ]; then
-            echo "Entered email does not match authorized email for $ACTOR"
-            exit 1
-          fi
-
-          echo "Authorization successful for $ACTOR"
-
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.inputs.branch }}
-          fetch-depth: 0
 
   build:
     needs: verify
@@ -76,7 +55,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.branch }}
+          ref: ${{ github.ref }}
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
@@ -105,8 +84,7 @@ jobs:
         run: |
           echo "## Deployment Successful" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- **Triggered by**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Email used**: ${{ github.event.inputs.email }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Branch**: ${{ github.event.inputs.branch }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch**: ${{ github.ref }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Deployed by**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Deployment URL**: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
